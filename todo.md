@@ -30,4 +30,4 @@ Give shoutouts to streamers (on command, an (optional) timer or when they come i
 ### Raid suggestion
 Get a list of team members live right now (+ how long they have been live maybe
 ### SKY BASS Explained
-Explain SKY BASS (general) and suggests commands on further explenation on records/team/community/events (could also be automated/rotated)
+Explain SKY BASS (general) and suggests commands on further explanation on records/team/community/events (could also be automated/rotated)
