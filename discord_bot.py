@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix="", intents=intents)
 
 df = pd.read_csv("main.csv") # Get the datafarme from main.csv
 
-@bot.tree.command(name="Info", description="Get the linked information from the SKY BASS bot")
+@bot.tree.command(name="info", description="Get the linked information from the SKY BASS bot")
 async def say_hi(interaction: discord.Interaction):
     # Grab the user ID of the user
     user_id = interaction.user.id
@@ -53,8 +53,8 @@ async def say_hi(interaction: discord.Interaction):
         command_raidsuggestion = "❌"
 
     # Create the embed and send it to the user
-    embed = discord.Embed(title=(f"Setting up <@f{user_id}>"), color=None)
-    embed.add_field(name="Your information", value=f"## Credentials\n**Discord ID** - <@{user_id}> (this should mention you)\n**Twitch Channel** - {twitch_channel}\n**SKY BASS LINK** - Not available yet\n\n## Commands / Timers\n-# This will show you if you have commands disabled, in case you do. It'll show you the timers you have set up, you can change these with /commands XXXXX\n!skybass -  {command_skybass}\nSKY BASS Team shoutout - {skybass_shoutout}\n!randomshoutout  - {command_randomshoutout}\n!raidsuggestion  - {command_raidsuggestion}\n\n## Status\nTwitch Linked - Not available yet")
+    embed = discord.Embed(title=(f"Setting up <@{user_id}>"), color=None)
+    embed.add_field(name="Your information", value=f"Credentials\n**Discord ID** - <@{user_id}> (this should mention you)\n**Twitch Channel** - {twitch_channel}\n**SKY BASS LINK** - Not available yet\n\nCommands / Timers\n-# This will show you if you have commands disabled, in case you do. It'll show you the timers you have set up, you can change these with /commands XXXXX\n!skybass -  {command_skybass}\nSKY BASS Team shoutout - {skybass_shoutout}\n!randomshoutout  - {command_randomshoutout}\n!raidsuggestion  - {command_raidsuggestion}\n\nStatus\nTwitch Linked - Not available yet")
     await interaction.response.send_message(embed=embed) # Final send
 
 # When the bot gets ready, push it
